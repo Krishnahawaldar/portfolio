@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Krishna Hawaldar — Full-Stack Developer & UI/UX Designer. Explore my portfolio showcasing modern web apps, mobile projects, and creative design work." />
+    <title>Krishna Hawaldar | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===== PARTICLE CANVAS ===== -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo" id="nav-logo-link" aria-label="Home">
+                <span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links" role="list">
+                <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+                <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" id="nav-projects">Certifications</a></li>
+                <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-nav" id="nav-cta-btn">Hire Me</a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <ul role="list">
+                <li><a href="#about" class="mob-link" id="mob-about">About</a></li>
+                <li><a href="#skills" class="mob-link" id="mob-skills">Skills</a></li>
+                <li><a href="#projects" class="mob-link" id="mob-projects">Projects</a></li>
+                <li><a href="#contact" class="mob-link" id="mob-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home" aria-label="Hero introduction">
+        <div class="hero-content">
+            <div class="hero-badge" id="hero-badge">
+                <span class="badge-dot"></span> Available for work
+            </div>
+            <h1 class="hero-title" id="hero-title">
+                Hi, I'm <span class="gradient-text">Krishna Hawaldar</span>
+            </h1>
+            <div class="hero-subtitle" id="hero-subtitle">
+                <span class="subtitle-prefix">I build</span>
+                <span class="typing-wrapper">
+                    <span id="typing-text" class="typed-word"></span>
+                    <span class="cursor-blink">|</span>
+                </span>
+            </div>
+            <p class="hero-desc" id="hero-desc">
+                Full-stack developer & UI/UX designer crafting high-performance web applications
+                with a passion for clean code and stunning interfaces.
+            </p>
+            <div class="hero-actions" id="hero-actions">
+                <a href="#projects" class="btn btn-primary" id="view-work-btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline" id="contact-hero-btn">Let's Talk</a>
+            </div>
+            <div class="hero-stats" id="hero-stats" role="list" aria-label="Quick stats">
+                <div class="stat-item" role="listitem">
+                    <span class="stat-number" data-target="5">0</span><span class="stat-symbol">+</span>
+                    <span class="stat-label">Projects Done</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item" role="listitem">
+                    <span class="stat-number" data-target="0">0</span><span class="stat-symbol">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item" role="listitem">
+                    <span class="stat-number" data-target="0">0</span><span class="stat-symbol">+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual" id="hero-visual" aria-hidden="true">
+            <div class="avatar-ring outer-ring"></div>
+            <div class="avatar-ring mid-ring"></div>
+            <div class="avatar-container">
+                <img src="k.jpg" alt="Krishna Hawaldar profile photo" class="avatar-img" id="hero-avatar" />
+                <div class="avatar-glow"></div>
+            </div>
+            <div class="orbit-dot orbit-dot-1"></div>
+            <div class="orbit-dot orbit-dot-2"></div>
+            <div class="orbit-dot orbit-dot-3"></div>
+            <div class="floating-badge fb-1" aria-label="React developer">⚛️ React</div>
+            <div class="floating-badge fb-2" aria-label="Python developer">🐍 Python</div>
+            <div class="floating-badge fb-3" aria-label="UI/UX Design">🎨 UI/UX</div>
+        </div>
+        <a href="#about" class="scroll-indicator" id="scroll-indicator" aria-label="Scroll to About section">
+            <div class="scroll-arrow"></div>
+        </a>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about-section" id="about" aria-label="About me">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Passionate builder, creative thinker, and lifelong learner</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-side reveal">
+                    <div class="about-img-wrapper">
+                        <img src="k.jpg" alt="Krishna Hawaldar" class="about-img" id="about-profile-img" />
+                        <div class="exp-badge" id="exp-badge" aria-label="4 years of experience">
+                            <span class="exp-number">1+</span>
+                            <span class="exp-text">Years Exp</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text-side reveal">
+                    <h3 class="about-heading">Turning ideas into <span class="gradient-text">digital reality</span></h3>
+                    <p class="about-para">
+                        I'm a Computer Science and Engineer based in Raibag, karnataka, india .And i have worked with
+                        various
+                        small scale projects to build and test the knoweledge in a various kind of languages like
+                        c,java,python,html,css,javascript,react and various software tools during my bacholors
+                        At D Y Patil Agriculture and Techinical university Talsande .
+                    </p>
+                    <p class="about-para">
+                        I believe great software lives at the intersection of thoughtful design and
+                        robust engineering. Whether architecting scalable APIs or pixel-perfecting
+                        a UI, I bring the same level of care and precision to every layer of the stack.
+                    </p>
+                    <div class="about-details" role="list">
+                        <div class="detail-item" role="listitem" id="about-location">
+                            <span class="detail-icon" aria-hidden="true">📍</span>
+                            <span>Raibag,Karnataka,India</span>
+                        </div>
+                        <div class="detail-item" role="listitem" id="about-edu">
+                            <span class="detail-icon" aria-hidden="true">🎓</span>
+                            <span>B.Tech in Computer Science and Engineering</span>
+                        </div>
+                        <div class="detail-item" role="listitem" id="about-email-info">
+                            <span class="detail-icon" aria-hidden="true">✉️</span>
+                            <span>krishnahawaldar54@gmail.com</span>
+                        </div>
+                        <div class="detail-item" role="listitem" id="about-availability">
+                            <span class="detail-icon" aria-hidden="true">🟢</span>
+                            <span>Open to opportunities</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary" id="about-cta-btn">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section skills-section" id="skills" aria-label="My skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Technologies and tools I've mastered over the years</p>
+            </div>
+
+            <!-- Skill Category Tabs -->
+            <div class="skill-tabs" id="skill-tabs" role="tablist" aria-label="Skill categories">
+                <button class="skill-tab active" id="tab-frontend" role="tab" aria-selected="true"
+                    aria-controls="panel-frontend" data-tab="frontend">Frontend</button>
+                <button class="skill-tab" id="tab-backend" role="tab" aria-selected="false"
+                    aria-controls="panel-backend" data-tab="backend">Backend</button>
+                <button class="skill-tab" id="tab-tools" role="tab" aria-selected="false" aria-controls="panel-tools"
+                    data-tab="tools">Tools & Design</button>
+            </div>
+
+            <div class="skill-panels">
+                <!-- Frontend Panel -->
+                <div class="skill-panel active" id="panel-frontend" role="tabpanel" aria-labelledby="tab-frontend">
+                    <div class="skills-grid">
+                        <div class="skill-card reveal" id="skill-html">
+                            <div class="skill-icon">🌐</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">HTML5 / CSS3</span>
+                                    <span class="skill-pct">95%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 95%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card reveal" id="skill-js">
+                            <div class="skill-icon">⚡</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">JavaScript (ES6+)</span>
+                                    <span class="skill-pct">92%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 92%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card reveal" id="skill-react">
+                            <div class="skill-icon">⚛️</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">React / Next.js</span>
+                                    <span class="skill-pct">90%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card reveal" id="skill-ts">
+                            <div class="skill-icon">🔷</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Panel -->
+                <div class="skill-panel" id="panel-backend" role="tabpanel" aria-labelledby="tab-backend">
+                    <div class="skills-grid">
+                        <div class="skill-card reveal" id="skill-node">
+                            <div class="skill-icon">🟢</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">Node.js / Express</span>
+                                    <span class="skill-pct">88%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 88%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card reveal" id="skill-python">
+                            <div class="skill-icon">🐍</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">Python / FastAPI</span>
+                                    <span class="skill-pct">82%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 82%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card reveal" id="skill-db">
+                            <div class="skill-icon">🗄️</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">PostgreSQL / MongoDB</span>
+                                    <span class="skill-pct">80%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card reveal" id="skill-graphql">
+                            <div class="skill-icon">🔗</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">GraphQL / REST APIs</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Panel -->
+                <div class="skill-panel" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools">
+                    <div class="skills-grid">
+                        <div class="skill-card reveal" id="skill-figma">
+                            <div class="skill-icon">🎨</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">Figma / Adobe XD</span>
+                                    <span class="skill-pct">87%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 87%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card reveal" id="skill-git">
+                            <div class="skill-icon">🐙</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">Git / GitHub</span>
+                                    <span class="skill-pct">93%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 93%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card reveal" id="skill-docker">
+                            <div class="skill-icon">🐳</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">Docker / AWS</span>
+                                    <span class="skill-pct">75%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card reveal" id="skill-testing">
+                            <div class="skill-icon">🧪</div>
+                            <div class="skill-info">
+                                <div class="skill-name-row">
+                                    <span class="skill-name">Jest / Cypress</span>
+                                    <span class="skill-pct">78%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="skill-fill" style="--target: 78%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Pills -->
+            <div class="tech-stack reveal" id="tech-stack" aria-label="Technology stack">
+                <span class="tech-pill" id="tech-react">React</span>
+                <span class="tech-pill" id="tech-nextjs">Next.js</span>
+                <span class="tech-pill" id="tech-nodejs">Node.js</span>
+                <span class="tech-pill" id="tech-typescript">javascript</span>
+                <span class="tech-pill" id="tech-python">Python</span>
+                <span class="tech-pill" id="tech-postgres">mySQL</span>
+                <span class="tech-pill" id="tech-mongodb">MongoDB</span>
+                <span class="tech-pill" id="tech-docker">java</span>
+                <span class="tech-pill" id="tech-aws">AWS</span>
+                <span class="tech-pill" id="tech-figma">C++</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS SECTION ===== -->
+    <section class="section projects-section" id="projects" aria-label="My certifications">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What I've Earned</span>
+                <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+                <p class="section-subtitle">Credentials that validate my technical expertise</p>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Certificate 1 -->
+                <article class="project-card reveal" id="cert-ibm-cpp">
+                    <div class="project-img-wrapper">
+                        <embed src="IBM C++ Certificate.pdf" type="application/pdf" class="project-img"
+                            style="width:100%; height:220px; border:none; border-radius:12px 12px 0 0;" />
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="proj-tag">IBM</span>
+                            <span class="proj-tag">C++</span>
+                            <span class="proj-tag">Programming</span>
+                        </div>
+                        <h3 class="project-title">IBM C++ Programming</h3>
+                        <p class="project-desc">
+                            Certified by IBM in C++ Programming fundamentals, covering object-oriented concepts,
+                            memory management, STL, and building efficient, high-performance applications.
+                        </p>
+                        <div class="project-metrics" aria-label="Certificate details">
+                            <span class="metric">🏆 IBM Certified</span>
+                            <span class="metric">💻 C++ OOP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Certificate 2 -->
+                <article class="project-card reveal" id="cert-java">
+                    <div class="project-img-wrapper">
+                        <embed src="java certificate.pdf" type="application/pdf" class="project-img"
+                            style="width:100%; height:220px; border:none; border-radius:12px 12px 0 0;" />
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="proj-tag">Java</span>
+                            <span class="proj-tag">OOP</span>
+                            <span class="proj-tag">Backend</span>
+                        </div>
+                        <h3 class="project-title">Java Programming</h3>
+                        <p class="project-desc">
+                            Certified in Java Programming, demonstrating proficiency in object-oriented design,
+                            data structures, exception handling, collections, and building robust Java applications.
+                        </p>
+                        <div class="project-metrics" aria-label="Certificate details">
+                            <span class="metric">☕ Java Certified</span>
+                            <span class="metric">🔧 OOP & DSA</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Certificate 3 -->
+                <article class="project-card reveal" id="cert-javascript">
+                    <div class="project-img-wrapper">
+                        <embed src="java script certifiacate.pdf" type="application/pdf" class="project-img"
+                            style="width:100%; height:220px; border:none; border-radius:12px 12px 0 0;" />
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="proj-tag">JavaScript</span>
+                            <span class="proj-tag">Web Dev</span>
+                            <span class="proj-tag">Frontend</span>
+                        </div>
+                        <h3 class="project-title">JavaScript Development</h3>
+                        <p class="project-desc">
+                            Certified in JavaScript, covering ES6+ features, DOM manipulation, asynchronous
+                            programming, APIs, and building dynamic, interactive web applications.
+                        </p>
+                        <div class="project-metrics" aria-label="Certificate details">
+                            <span class="metric">⚡ JS Certified</span>
+                            <span class="metric">🌐 Web Dev</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact-section" id="contact" aria-label="Contact me">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
+            </div>
+            <div class="contact-grid">
+                <!-- Contact Info Cards -->
+                <div class="contact-info reveal">
+                    <h3 class="contact-heading">Let's build something amazing together</h3>
+                    <p class="contact-para">
+                        Whether you have a startup idea, need to revamp your digital presence,
+                        or are looking for a reliable development partner — I'm here to help turn
+                        your vision into reality.
+                    </p>
+                    <div class="contact-cards" role="list">
+                        <a href="https://mail.google.com/mail/?view=cm&to=krishnahawaldar54@gmail.com"
+                            class="contact-card" id="contact-email-card" role="listitem" aria-label="Email me"
+                            target="_blank" rel="noopener noreferrer">
+                            <div class="cc-icon" aria-hidden="true">✉️</div>
+                            <div class="cc-text">
+                                <span class="cc-label">Email</span>
+                                <span class="cc-value">krishnahawaldar54@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+91 7090802901" class="contact-card" id="contact-phone-card" role="listitem"
+                            aria-label="Call me">
+                            <div class="cc-icon" aria-hidden="true">📱</div>
+                            <div class="cc-text">
+                                <span class="cc-label">Phone</span>
+                                <span class="cc-value">+91 7090802901</span>
+                            </div>
+                        </a>
+                        <div class="contact-card contact-card-static" id="contact-location-card" role="listitem">
+                            <div class="cc-icon" aria-hidden="true">📍</div>
+                            <div class="cc-text">
+                                <span class="cc-label">Location</span>
+                                <span class="cc-value">Raibag,karnataka,India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Links -->
+                    <div class="social-links" id="social-links" aria-label="Social media links">
+                        <a href="https://github.com/Krishnahawaldar" class="social-btn" id="social-github"
+                            aria-label="GitHub profile" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.orsvgg/2000/" width="20" height="20" fill="currentColor"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/krishna-hawaldar45" class="social-btn" id="social-linkedin"
+                            aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" id="social-twitter" aria-label="Twitter profile" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" id="social-dribbble" aria-label="Dribbble profile"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4.006-.816zm-11.62-2.073c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.52-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.176zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.46 0-.922.033-1.4.09zm10.236 3.05c-.203.29-1.96 2.484-5.722 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.318-6.386z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrap reveal">
+                    <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+                        <div class="form-row">
+                            <div class="form-group" id="form-group-name">
+                                <label for="input-name" class="form-label">Full Name</label>
+                                <input type="text" id="input-name" name="name" class="form-input" placeholder="John Doe"
+                                    required autocomplete="name" />
+                                <span class="form-error" id="error-name" role="alert" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group" id="form-group-email">
+                                <label for="input-email" class="form-label">Email Address</label>
+                                <input type="email" id="input-email" name="email" class="form-input"
+                                    placeholder="john@example.com" required autocomplete="email" />
+                                <span class="form-error" id="error-email" role="alert" aria-live="polite"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" id="form-group-subject">
+                            <label for="input-subject" class="form-label">Subject</label>
+                            <input type="text" id="input-subject" name="subject" class="form-input"
+                                placeholder="Project Collaboration" required />
+                            <span class="form-error" id="error-subject" role="alert" aria-live="polite"></span>
+                        </div>
+                        <div class="form-group" id="form-group-message">
+                            <label for="input-message" class="form-label">Message</label>
+                            <textarea id="input-message" name="message" class="form-input form-textarea"
+                                placeholder="Tell me about your project..." rows="5" required></textarea>
+                            <span class="form-error" id="error-message" role="alert" aria-live="polite"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                            <span id="btn-text">Send Message 🚀</span>
+                            <span id="btn-loader" class="btn-loader" aria-hidden="true" style="display:none;"></span>
+                        </button>
+                        <!-- Success message -->
+                        <div class="form-success" id="form-success" role="status" aria-live="polite"
+                            style="display:none;">
+                            ✅ Message sent! I'll get back to you as Early as possible.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo" aria-label="Krishna Hawaldar logo">
+                    <span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-copy">
+                    © <span id="footer-year"></span> Krishna Hawaldar. Crafted with ❤️ and lots of ☕
+                </p>
+                <a href="#home" class="back-to-top" id="back-to-top-btn" aria-label="Back to top">↑ Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
